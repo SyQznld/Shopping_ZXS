@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.demo1.activity.SyLoginActivity">
+
+    <ImageView
+        android:id="@+id/login_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:onClick="onClick"
+        android:src="@mipmap/navibar_back" />
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/login_logo" />
+
+    <RelativeLayout
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/login_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/user_account" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/login_account"
+            sy:counterEnabled="true"
+            sy:counterMaxLength="15"
+            sy:counterOverflowTextAppearance="@android:color/holo_red_light"
+            sy:errorEnabled="true"
+            sy:hintEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/youxiangadress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="邮箱地址" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/login_suo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/user_password" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/login_password"
+            sy:counterEnabled="true"
+            sy:counterMaxLength="12"
+            sy:counterOverflowTextAppearance="@android:color/holo_red_light"
+            sy:errorEnabled="true"
+            sy:hintEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/keyPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="账户密码"
+                android:inputType="numberPassword" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#30C3B2"
+        android:text="登录"
+        android:onClick="onClick"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/login_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="忘记密码"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:clickable="true"
+            android:onClick="onClick"
+            android:id="@+id/login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="立即注册"
+            android:textColor="#30C3B2" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="其他账号授权登录"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:id="@+id/xinLang"
+            android:src="@mipmap/share_action_weibo" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+
+            android:id="@+id/weixin"
+            android:src="@mipmap/share_action_moments" />
+
+        <ImageView
+            android:onClick="onClick"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:id="@+id/qq"
+            android:src="@mipmap/share_action_qq" />
+    </LinearLayout>
+</LinearLayout>

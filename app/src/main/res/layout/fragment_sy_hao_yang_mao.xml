@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.demo1.fragment.SyHaoYangMaoFragment">
+
+    <include layout="@layout/toolbar_bottom_bar" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+
+        android:id="@+id/haoyangmao_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:verticalSpacing="5dp" />
+
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/listView_brands_pop"
+        android:layout_width="100dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_height="wrap_content"></ListView>
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/gridView_brands_pop"
+        android:layout_width="0dp"
+        android:numColumns="2"
+        android:background="@android:color/darker_gray"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"></GridView>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="20dp"
+    android:id="@+id/tuichudenglu"
+    android:clickable="true"
+    android:onClick="onClick"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/offLogin"
+            android:text="退出登录"
+            android:layout_marginLeft="50dp"
+            android:textSize="15dp"
+            android:layout_alignBottom="@+id/menu_icon_exit"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:id="@+id/menu_icon_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/menu_icon_exit"
+            android:layout_margin="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/menu_click_more"
+            android:layout_alignTop="@+id/offLogin"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            />
+    </RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_detail"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="130dp"
+        android:layout_height="130dp" />
+
+    <TextView
+        android:id="@+id/title_detail"
+        android:text="这是标题啊"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_detail"
+        android:layout_toRightOf="@+id/image_detail"
+        android:layout_toEndOf="@+id/image_detail"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/price_detail"
+        android:text="69元包邮"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_detail"
+        android:layout_toRightOf="@+id/image_detail"
+        android:layout_toEndOf="@+id/image_detail"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/join_us_tip"
+        android:id="@+id/image_sitename"
+        android:text="京东"
+        android:layout_alignTop="@+id/image_detail"
+        android:layout_alignLeft="@+id/image_detail"
+        android:layout_alignStart="@+id/image_detail"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+</RelativeLayout>

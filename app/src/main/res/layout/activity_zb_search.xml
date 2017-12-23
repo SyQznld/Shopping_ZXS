@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.demo1.activity.ZbSearchActivity">
+    <!--搜索框-->
+    <LinearLayout
+        android:id="@+id/zb_search_tou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView
+
+            android:id="@+id/zb_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/navibar_back" />
+
+        <RelativeLayout
+            android:id="@+id/zb_search_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/zb_search_back"
+            android:background="@drawable/toolbar_search_shape">
+
+            <ImageView
+                android:id="@+id/zb_search_searchicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/navibar_searchbar" />
+            <EditText
+                android:id="@+id/zb_search_searchEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/zb_search_searchicon"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:hint="输入您想搜索的内容" />
+        </RelativeLayout>
+
+        <TextView
+            android:onClick="onClick"
+            android:id="@+id/zb_search_searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignBottom="@+id/zb_search_back"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@+id/zb_search_search"
+            android:textSize="20dp"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <!--设置搜索的TextView  三列-->
+
+   <LinearLayout
+       android:layout_marginTop="30dp"
+       android:layout_marginLeft="15dp"
+       android:orientation="vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/search_ll"
+       >
+   </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#DCDCDC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:id="@+id/search_remove"
+        android:text="清除搜索历史"
+        android:textColor="#30C3B2" />
+
+    <!--热门推荐-->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="热门推荐"
+        android:textColor="@android:color/darker_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#DCDCDC" />
+
+    <!--流式布局   搜索关键字-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.example.administrator.demo1.view.SearchLiuShiText
+            android:id="@+id/search_liushiView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.example.administrator.demo1.view.SearchLiuShiText>
+    </RelativeLayout>
+
+</LinearLayout>

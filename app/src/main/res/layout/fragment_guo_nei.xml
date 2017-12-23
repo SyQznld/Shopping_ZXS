@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.demo1.fragment.GuoNeiFragment">
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/appBarLayout"
+                >
+                <!--CollapsingToolbarLayout整体的标题栏，额外添加-->
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/toolBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <LinearLayout
+                            android:id="@+id/ranking_common"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/ranking_common_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="14dp"
+                                android:text="分类"
+                                android:textSize="16sp" />
+                            <ImageView
+                                android:src="@mipmap/filter_header_view_default"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ranking_sale_volume"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/ranking_sale_volume_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="商城" />
+                            <ImageView
+                                android:src="@mipmap/filter_header_view_default"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ranking_brand"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/ranking_price_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="品牌"
+                                android:textSize="16sp" />
+                            <ImageView
+                                android:src="@mipmap/filter_header_view_default"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ranking_price"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/ranking_filter_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="14dp"
+                                android:text="价格"
+                                android:textSize="16sp" />
+                            <ImageView
+                                android:src="@mipmap/filter_header_view_default"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/listView"
+                android:layout_below="@id/appBarLayout"
+                android:layout_width="match_parent"
+                android:divider="#19000000"
+                android:dividerHeight="5dp"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                android:layout_height="match_parent"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+</RelativeLayout>

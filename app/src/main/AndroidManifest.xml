@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.demo1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activity.ZbSearchActivity" />
+        <activity android:name=".activity.SySettingActivity" />
+        <activity android:name=".activity.SyLoginActivity" />
+        <activity android:name=".activity.ZbYouHuiDetailsActivity" />
+        <activity android:name=".activity.SyLiuShiClickActivity" />
+        <activity android:name=".activity.ZbWebViewActivity" />
+        <activity android:name=".activity.ZbMyCollectActivity" />
+        <activity android:name=".activity.SyHaoYangMaoDetailActivity" />
+        <activity android:name=".activity.SettingHelpActivity" />
+        <activity android:name=".activity.ZbRegisterActivity" />
+        <activity android:name=".activity.ZbForgetKeyActivity" />
+        <activity android:name=".activity.GuoNeiDetailActivity" />
+        <activity android:name=".activity.SendEmailActivity" />
+        <activity android:name=".activity.setting_help.Help_BiJiaActivity" />
+        <activity android:name=".activity.setting_help.Help_BuyActivity" />
+        <activity android:name=".activity.setting_help.Help_DaoHuoActivity" />
+        <activity android:name=".activity.setting_help.Help_FindActivity" />
+        <activity android:name=".activity.setting_help.Help_JiangJiaActivity" />
+        <activity android:name=".activity.setting_help.Help_ShouCangActivity" />
+        <activity android:name=".activity.setting_help.Help_XiaDanActivity" />
+        <activity android:name=".activity.setting_help.Help_YouHuiJuanActivity" />
+        <activity android:name=".activity.setting_help.Help_ZhuCeActivity" />
+        <activity android:name=".activity.MyShouCangActivity" />
+        <activity android:name=".activity.MyHaoPinActivity" />
+        <activity android:name=".activity.MyTuCaoActivity" />
+        <activity android:name=".activity.MyTuiJainActivity" />
+        <activity android:name=".activity.JiaRuActivity" />
+        <activity android:name=".activity.HuanCunActivity"></activity>
+        <activity android:name=".activity.BiaoQianActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.demo1.activity.ZbRegisterActivity">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:id="@+id/navibar_back"
+    android:onClick="onClick"
+    android:src="@mipmap/navibar_back"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+//地址
+        <EditText
+            android:drawablePadding="15dp"
+            android:hint="请输入邮箱地址"
+            android:drawableLeft="@mipmap/user_email"
+            android:id="@+id/register_adress"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@+id/register_userWord"
+            />
+//用户名
+        <EditText
+            android:hint="请输入昵称"
+            android:id="@+id/register_userWord"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@mipmap/user_account"
+            android:layout_above="@+id/key_rl"
+            />
+
+//用户密码
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/register_button"
+    android:id="@+id/key_rl">
+        <EditText
+            android:id="@+id/register_passWord"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:drawablePadding="15dp"
+            android:textSize="15dp"
+            android:inputType="numberPassword"
+            android:hint="密码(6-30个字符,英文区分大小写)"
+            android:drawableLeft="@mipmap/user_password"
+
+            />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:id="@+id/imageShow"
+        android:background="@drawable/registerkey_item"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="172dp"
+        android:text="立即注册"
+        android:id="@+id/register_button"
+        android:onClick="onClick"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/register_item"
+        android:layout_alignParentBottom="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册即代表您同意《购物党用户协议》"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/text_register"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

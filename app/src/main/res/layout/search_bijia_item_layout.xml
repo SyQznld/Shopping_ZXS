@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bijia_pic"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bijia_pic"
+        android:layout_toRightOf="@+id/bijia_pic"
+        android:layout_toEndOf="@+id/bijia_pic"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:id="@+id/bijia_title" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:id="@+id/price_tv"
+        android:layout_above="@+id/bijia_onsale"
+        android:layout_toRightOf="@+id/bijia_pic"
+        android:layout_toEndOf="@+id/bijia_pic"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bijia_count"
+        android:layout_alignTop="@+id/bijia_pinglun"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@mipmap/quanwang_item_market"
+        android:id="@+id/siteIcon_iv"
+        android:layout_alignBottom="@+id/bijia_pic"
+        android:layout_alignLeft="@+id/bijia_title"
+        android:layout_alignStart="@+id/bijia_title" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bijia_onsale"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/siteIcon_iv"
+        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bijia_pinglun"
+        android:src="@mipmap/quanwang_item_comment"
+        android:layout_alignTop="@+id/bijia_onsale"
+        android:layout_toLeftOf="@+id/bijia_count"
+        android:layout_toStartOf="@+id/bijia_count" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/siteIcon_iv"
+        android:layout_toEndOf="@+id/siteIcon_iv" />
+</RelativeLayout>
